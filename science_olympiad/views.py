@@ -1,4 +1,4 @@
-from asyncio.windows_events import NULL
+
 from django.shortcuts import render, get_object_or_404
 from .models import Inventor, Contest, ContestQuestion, ContestAnswer
 from .forms import InventorForm
