@@ -1,4 +1,3 @@
-
 """
 Django settings for ScienceOlympics project.
 
@@ -78,9 +77,11 @@ WSGI_APPLICATION = 'ScienceOlympics.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'enjaz',
+        'HOST': '127.0.0.1',
         'OPTIONS': {
-            'read_default_file': '/etc/mysql/my.cnf',
-        },
+	'read_default_file': '/etc/mysq/my.cnf',
+	
     }
 }
 
