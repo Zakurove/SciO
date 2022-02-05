@@ -110,8 +110,8 @@ def show_question(request, contest_id, question_id):
         if choice.is_correct:
             answer = choice
     excludables = question.contestanswer_set.filter(is_excludable=True)
-    excludable_1 = NULL
-    excludable_2 = NULL
+    # excludable_1 = null
+    # excludable_2 = null
     if len(list(excludables)) == 2:
         excludables = list(excludables)
         excludable_1 = excludables.pop()
