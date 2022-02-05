@@ -5,9 +5,9 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.index, name="index"),
-    # url(r'^form/$', views.view_form, name="view_form"),
+    url(r'^form/$', views.view_form, name="view_form"),
     url(r'^(?P<section>\w+)/$', views.view_section, name="view_section"),
-    # url(r'^inventors/register/$', views.add_inventor2, name='add_inventor'),
+    url(r'^inventors/register/$', views.add_inventor2, name='add_inventor'),
     
 
     # url(r'^contest/(?P<contest_id>\d+)/begin/$', views.begin_contest, name='begin_contest'),
