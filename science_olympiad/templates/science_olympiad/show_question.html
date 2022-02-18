@@ -113,19 +113,19 @@ td.the_wheel{
     <div class="col-lg-12" style="padding-left:70px">
         <div></div>
         <div class="row" align="rtl">
-            <div id="choice1" class="choice col" style="border: 3px solid white; padding:15px; margin:10px" onClick="jqcd('start')">
+            <div id="choice1" class="choice col" style="border: 3px solid black; padding:15px; margin:10px" onClick="jqcd('start')">
                  <img align="right" src="{% static 'science_olympiad/box_a.png' %}" style="width:25px; margin-left:15px;">أ) {{choice1.text}}
             </div>
-            <div id="choice2" class="choice col" style="border: 3px solid white; padding:15px; margin:10px" onClick="jqcd('start')">
+            <div id="choice2" class="choice col" style="border: 3px solid black; padding:15px; margin:10px" onClick="jqcd('start')">
                  <img align="right" src="{% static 'science_olympiad/box_b.png' %}" style="width:25px; margin-left:15px;"> ب) {{choice2.text}}
             </div>
         </div>
         <br>
         <div class="row">
-            <div id="choice3" class="choice col" style="border: 3px solid white; padding:15px; margin:10px" onClick="jqcd('start')">
+            <div id="choice3" class="choice col" style="border: 3px solid black; padding:15px; margin:10px" onClick="jqcd('start')">
                  <img align="right" src="{% static 'science_olympiad/box_c.png' %}" style="width:25px; margin-left:15px;"> ج) {{choice3.text}}
             </div>
-            <div id="choice4" class="choice col" style="border: 3px solid white; padding:15px; margin:10px" onClick="jqcd('start')">
+            <div id="choice4" class="choice col" style="border: 3px solid black; padding:15px; margin:10px" onClick="jqcd('start')">
                  <img align="right" src="{% static 'science_olympiad/box_d.png' %}" style="width:25px; margin-left:15px;"> د) {{choice4.text}}
             </div>
         </div>
@@ -133,7 +133,7 @@ td.the_wheel{
     <br><br>
     <div class="col-lg-12">
         <span id="jqcd_count" style="text-align:center; font-size:50px">00:30</span><br><br>
-        <input type="button" class="btn btn-primary" style="width:180px; background-color:#fd3576; border-color:#fd3576" id="jqcd_start" value="بدء" onClick="jqcd('start')" />
+        <input type="button" class="btn btn-primary" style="width:180px; background-color:#a21f1a; border-color:#fd3576" id="jqcd_start" value="بدء" onClick="jqcd('start')" />
         <input type="button" class="btn btn-primary" id="jqcd_stop" value="انتهاء" onClick="jqcd('stop')" />
         <input type="button" class="btn btn-primary" style="width:140px" id="jqcd_reset" value="إعادة تعيين" onClick="jqcd('reset')" /><br><br>
         <input type="text" id="jqcd_time" value="00:30" />
@@ -142,7 +142,7 @@ td.the_wheel{
 
 <a id="exclude-choice1" style="font-size:24px;background-color:#a21f1a;border-color:#fd3576" class="btn btn-primary" href="#">حذف خيارات</a>
 <a id="exclude-choice2" style="font-size:24px;background-color:#a21f1a;border-color:#fd3576" class="btn btn-primary" href="#">حذف خيارات</a>
-<div id="time_up" style="margin-top:120px;background-color:#fd3576; margin-bottom:220px"><h1 style="font-size:80px">انتهى الوقت!</h1></div>
+<div id="time_up" style="margin-top:120px;background-color:#a21f1a; margin-bottom:220px"><h1 style="font-size:80px">انتهى الوقت!</h1></div>
 {% if question.is_last_main %}
     <a id="next" style="font-size:24px;background-color:#fd3576;border-color:#fd3576" class="btn btn-primary" href="{% url 'science_olympiad:end_contest' %}">
 {% else %}
