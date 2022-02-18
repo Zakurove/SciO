@@ -12,8 +12,8 @@
 
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 
-{% extends 'science_olympiad/base.html' %}{% load static %}
 
+{% extends 'science_olympiad/base.html' %}{% load static %}
 {% block title %}المسابقة العلمية | الصفحة الترحيبية{% endblock %}
 
 {% block style %}
@@ -41,57 +41,6 @@ a, a:hover, a:focus{
 {% endblock %}
 
 {% block head %}
-{% endblock %}
-
-{% block content %}
-<!--<div class="profile-page sidebar-collapse">-->
-  <!--<div class="page-header header-filter" data-parallax="true" style="background-image: url({% static 'science_olympiad/images/header.jpg' %});">-->
-       <!--&lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;Navbar Start&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
-          <!--<nav style="height:100px" class="navbar navbar-transparent navbar-expand-lg" id="sectionsNav">-->
-
-          <!--<div class="container">-->
-            <!--<div  class="navbar-translate">-->
-              <!--<a class="navbar-brand" href="">-->
-                  <!--<img id="logo" height="130px" style="margin-bottom:0px; margin-top:-100px; margin-right:0px"-->
-                       <!--src="{% static 'science_olympiad/images/logo_white.png' %}">-->
-              <!--</a>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--</nav>-->
-          <!--&lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;Navbar End&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
-  <!--</div>-->
-  <!--<div class="main ">-->
-    <!--<div class="profile-content">-->
-      <!--<div class="container">-->
-        <!--<div class="row">-->
-          <!--<div class="col-md-6 ml-auto mr-auto">-->
-            <!--<div class="profile">-->
-              <!--<div class="avatar">-->
-                  <!--<img style="background-color:#fff; padding:15px" src="{% static 'science_olympiad/images/sections/black/contest_black.png' %}" class="rounded-circle img-fluid">-->
-              <!--</div>-->
-              <!--<div class="name">-->
-                <!--<h3 class="title">المسابقة العلمية</h3>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-          <!--<div style="padding-bottom:100px" class="description text-center">-->
-
-        <!--<div class="row" style="text-align:justify; text-align-last: center">-->
-            <!--هي مسابقة علمية ثقافية وتنافسية تنص على رؤية، وقياس المدى العلمي و الثقافي بين طلبة الجامعة من مختلف الكليات، في مختلف العلوم، وتهدف لخلق بيئة تؤمن بالتنافس الودِّي، لتعزز من أهمية اطلاع الفرد على جميع العلوم. حيث يمثل كل كلية فريق مُكون من أربعة طلاب وطالبات.-->
-<!--كوني/كن جزءًا منها!-->
-        <!--</div>-->
-        <!--<div class="section text-center">-->
-        <!--<p style="text-align:center"></p>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
-
-
-
 <div class="row" style="width:100%; padding-top:100px; padding-right:70px; margin-bottom:0px">
 
       <div class="container" align="center">
@@ -103,24 +52,22 @@ a, a:hover, a:focus{
 
           <img style="padding:30px; max-width: 400px;" src="{% static 'science_olympiad/images/sections/icons/contest.png' %}">
           <br>
-<<<<<<< HEAD
+
           <h2>الفِرق المنافِسة:</h2>
-          {% if contest_id == '1' %}
-          <h2>كلية العلوم والمهن الصحية -العلوم الطبية التطبيقية</h2>
-          <h2>20 فبراير</h2>
-=======
+
+
           <h2 style="color: black;">الفِرق المنافِسة:</h2>
-          {% if contest_id == '2' %}
+          {% if contest_id == '6' %}
           <h2 style="color: black;">كلية العلوم والمهن الصحية -العلوم الطبية التطبيقية</h2>
           <h2 style="color: black;">20 فبراير</h2>
-          {% elif contest_id == '1' %}
+          {% elif contest_id == '5' %}
           <h2 style="color: black;">كلية تجريبية - كلية خيالية   </h2>
           <h2 style="color: black;">19 فبراير</h2>
->>>>>>> bd0ff4a1121b5c0ddd9ebedd26bbf6e4acfd4100
-          {% elif contest_id == '3' %}
+
+          {% elif contest_id == '7' %}
           <h2 style="color: black;">كلية التمريض - كلية الصحة العامة والمعلوماتية الصحية</h2>
           <h2 style="color: black;">21 فبراير</h2>
-          {% elif contest_id == '4' %}
+          {% elif contest_id == '8' %}
           <h2 style="color: black;">كلية طب الأسنان - كلية الصيدلة</h2>
           <h2 style="color: black;">27 فبراير</h2>
           {% endif %}
@@ -130,12 +77,15 @@ a, a:hover, a:focus{
       </div>
 
 </div>
+
 {% endblock %}
 
+
 {% block footer %}
-    <div class="container" align="left">
+<!--    <div class="container" align="left">
         <img src="{% static 'science_olympiad/images/logo_white.png' %}" style="height:100px">
         <img src="{% static 'science_olympiad/images/ta_logo_white.png' %}" style="height:80px; padding-left:20px">
         <img src="{% static 'science_olympiad/images/uni_logo_white.png' %}" style="height:80px">
-    </div>
+    </div> -->
 {% endblock %}
+

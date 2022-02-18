@@ -45,31 +45,25 @@ a, a:hover, a:focus{
 
 {% block content %}
 
-<div class="text-center" >
+<!-- <div class="text-center" >
     <img src="{% static 'science_olympiad/images/so_title_white.png' %}" style="">
 </div>
-
+-->
 <div class="row" style="width:100%; padding-top:30px; padding-right:70px; margin-bottom:0px">
       <div class="container" align="center">
         <img style="padding:30px; max-width: 400px;" src="{% static 'science_olympiad/images/sections/icons/contest.png' %}">
           
           <br><br><br>
           <!--TODO: Fix hardcode-->
-          <a id="next" style="font-size:24px;background-color:#fd3576;border-color:#fd3576" class="btn btn-primary" href="{% url 'science_olympiad:show_question' 1 5 %}">
+          <a id="next" style="font-size:24px;background-color:#a21f1a;border-color:#fd3576" class="btn btn-primary" href="{% url 'science_olympiad:show_question' 1 5 %}">
           الأسئلة الإضافية
           </a>
           <div>
-            <a id="results" style="font-size:24px;background-color:#fd3576;border-color:#fd3576;" class="btn btn-primary mt-4" href="https://www.google.com.sa/?gws_rd=cr">النتائج</a>
+            <a id="results" style="font-size:24px;background-color:#a21f1a;border-color:#fd3576;" class="btn btn-primary mt-4" href="https://www.google.com.sa/?gws_rd=cr">النتائج</a>
             </div>
       </div>
 
 </div>
 {% endblock %}
 
-{% block footer %}
-    <div class="container" align="left">
-        <img src="{% static 'science_olympiad/images/logo_white.png' %}" style="height:100px">
-        <img src="{% static 'science_olympiad/images/ta_logo_white.png' %}" style="height:80px; padding-left:20px">
-        <img src="{% static 'science_olympiad/images/uni_logo_white.png' %}" style="height:80px">
-    </div>
-{% endblock %}
+

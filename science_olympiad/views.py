@@ -53,12 +53,8 @@ def begin_contest(request, contest_id):
     context = {'contest':contest, 'questions':questions}
     return render(request, 'science_olympiad/begin_contest.html', context)
 
-def show_contest_welcomepage(request, contest_id, question_id):
-    contest = get_object_or_404(Contest, pk=contest_id)
-    questions = ContestQuestion.objects.filter(contest=contest)
-    question = questions.get(pk=question_id)
-    context = {'contest_id': contest_id, 'question':question,}
-    return render(request, 'science_olympiad/show_contest_welcomepage.html', context)
+def show_contest_welcomepage(request):
+    return render(request, 'science_olympiad/show_contest_welcomepage.html')
 
 def show_contest_endpage(request):
     return render(request, 'science_olympiad/show_contest_endpage.html')
@@ -118,6 +114,7 @@ def show_question(request, contest_id, question_id):
         excludable_2 = excludables.pop()
     next_question_id = int(question_id) + 1
     context = {'contest': contest, 'questions': questions, 'question':question,
+               'contest_id': contest_id, 'question_id': question_id,
                'choice1':choice1, 'choice2':choice2,
                'choice3':choice3, 'choice4':choice4,
                'next_question_id':next_question_id, 'answer':answer,
@@ -125,4 +122,4 @@ def show_question(request, contest_id, question_id):
     return render(request, 'science_olympiad/show_question.html', context)
 
 def timer(request):
-    return render(request, 'science_olympiad/timer.html')
+    return render(request, 'science_olympiad/timer.html', contest)
