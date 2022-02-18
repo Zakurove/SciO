@@ -18,9 +18,11 @@ from django.urls import include, path, re_path
 from django.conf.urls import url
 
 
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', include('science_olympiad.urls')),
-    path('', include(('science_olympiad.urls', 'science_olympiad'), namespace="science_olympiad")),
+    re_path('', include(('science_olympiad.urls', 'science_olympiad'), namespace="science_olympiad")),
     # path('/', include('science_olympiad.urls', namespace="science_olympiad", app_name="science_olympiad")),
 ]

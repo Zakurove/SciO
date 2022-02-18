@@ -104,7 +104,7 @@ a, a:hover, a:focus{
           <img style="padding:30px" src="{% static 'science_olympiad/images/sections/icons/contest.png' %}">
           <br>
           <h2>الفِرق المنافِسة:</h2>
-          {% if contest_id == '2' %}
+          {% if contest_id == '1' %}
           <h2>كلية العلوم والمهن الصحية -العلوم الطبية التطبيقية</h2>
           <h2>20 فبراير</h2>
           {% elif contest_id == '3' %}
@@ -116,7 +116,7 @@ a, a:hover, a:focus{
           {% endif %}
 
           <br>
-          <a href="{% url 'science_olympiad:show_question' contest_id question.pk %}" class="btn btn-primary" style="font-size:24px; background-color:#fd3576; border-color:#fd3576; align-text:center">بدء المسابقة</a>
+          <a href="{% url 'science_olympiad:show_question' contest_id question.pk %}" class="btn btn-primary" style="font-size:24px; background-color:#a21f1a; border-color:#fd3576; align-text:center">بدء المسابقة</a>
       </div>
 
 </div>
@@ -126,7 +126,6 @@ a, a:hover, a:focus{
     <div class="container" align="left">
         <img src="{% static 'science_olympiad/images/logo_white.png' %}" style="height:100px">
         <img src="{% static 'science_olympiad/images/ta_logo_white.png' %}" style="height:80px; padding-left:20px">
-        <img src="{% static 'science_olympiad/images/sc_logo_white.png' %}" style="height:80px; padding-left:20px">
         <img src="{% static 'science_olympiad/images/uni_logo_white.png' %}" style="height:80px">
     </div>
 {% endblock %}
