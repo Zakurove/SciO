@@ -101,18 +101,18 @@ a, a:hover, a:focus{
           <img src="{% static 'science_olympiad/images/so_title_white.png' %}" style="">
           <br>
 
-          <img style="padding:30px" src="{% static 'science_olympiad/images/sections/icons/contest.png' %}">
+          <img style="padding:30px; max-width: 400px;" src="{% static 'science_olympiad/images/sections/icons/contest.png' %}">
           <br>
-          <h2>الفِرق المنافِسة:</h2>
+          <h2 style="color: black;">الفِرق المنافِسة:</h2>
           {% if contest_id == '2' %}
-          <h2>كلية العلوم والمهن الصحية -العلوم الطبية التطبيقية</h2>
-          <h2>20 فبراير</h2>
+          <h2 style="color: black;">كلية العلوم والمهن الصحية -العلوم الطبية التطبيقية</h2>
+          <h2 style="color: black;">20 فبراير</h2>
           {% elif contest_id == '3' %}
-          <h2>كلية التمريض - كلية الصحة العامة والمعلوماتية الصحية</h2>
-          <h2>21 فبراير</h2>
+          <h2 style="color: black;">كلية التمريض - كلية الصحة العامة والمعلوماتية الصحية</h2>
+          <h2 style="color: black;">21 فبراير</h2>
           {% elif contest_id == '4' %}
-          <h2>كلية طب الأسنان - كلية الصيدلة</h2>
-          <h2>27 فبراير</h2>
+          <h2 style="color: black;">كلية طب الأسنان - كلية الصيدلة</h2>
+          <h2 style="color: black;">27 فبراير</h2>
           {% endif %}
 
           <br>
@@ -126,7 +126,6 @@ a, a:hover, a:focus{
     <div class="container" align="left">
         <img src="{% static 'science_olympiad/images/logo_white.png' %}" style="height:100px">
         <img src="{% static 'science_olympiad/images/ta_logo_white.png' %}" style="height:80px; padding-left:20px">
-        <img src="{% static 'science_olympiad/images/sc_logo_white.png' %}" style="height:80px; padding-left:20px">
         <img src="{% static 'science_olympiad/images/uni_logo_white.png' %}" style="height:80px">
     </div>
 {% endblock %}

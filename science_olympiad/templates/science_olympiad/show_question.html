@@ -103,7 +103,7 @@ td.the_wheel{
 
 <div class="row" align="right">
     <a href="{% url 'science_olympiad:end_contest' %}">
-        <img style="padding:30px" src="{% static 'science_olympiad/images/sections/icons/contest.png' %}">
+        <img style="padding:30px; max-width: 200px" src="{% static 'science_olympiad/images/sections/icons/contest.png' %}">
     </a>
 </div>
 
@@ -113,19 +113,19 @@ td.the_wheel{
     <div class="col-lg-12" style="padding-left:70px">
         <div></div>
         <div class="row" align="rtl">
-            <div id="choice1" class="choice col" style="border: 3px solid white; padding:15px; margin:10px">
+            <div id="choice1" class="choice col" style="border: 3px solid white; padding:15px; margin:10px" onClick="jqcd('start')">
                  <img align="right" src="{% static 'science_olympiad/box_a.png' %}" style="width:25px; margin-left:15px;">أ) {{choice1.text}}
             </div>
-            <div id="choice2" class="choice col" style="border: 3px solid white; padding:15px; margin:10px">
+            <div id="choice2" class="choice col" style="border: 3px solid white; padding:15px; margin:10px" onClick="jqcd('start')">
                  <img align="right" src="{% static 'science_olympiad/box_b.png' %}" style="width:25px; margin-left:15px;"> ب) {{choice2.text}}
             </div>
         </div>
         <br>
         <div class="row">
-            <div id="choice3" class="choice col" style="border: 3px solid white; padding:15px; margin:10px">
+            <div id="choice3" class="choice col" style="border: 3px solid white; padding:15px; margin:10px" onClick="jqcd('start')">
                  <img align="right" src="{% static 'science_olympiad/box_c.png' %}" style="width:25px; margin-left:15px;"> ج) {{choice3.text}}
             </div>
-            <div id="choice4" class="choice col" style="border: 3px solid white; padding:15px; margin:10px">
+            <div id="choice4" class="choice col" style="border: 3px solid white; padding:15px; margin:10px" onClick="jqcd('start')">
                  <img align="right" src="{% static 'science_olympiad/box_d.png' %}" style="width:25px; margin-left:15px;"> د) {{choice4.text}}
             </div>
         </div>
@@ -139,6 +139,7 @@ td.the_wheel{
         <input type="text" id="jqcd_time" value="00:30" />
     </div>
 </div>
+
 <a id="exclude-choice1" style="font-size:24px;background-color:#fd3576;border-color:#fd3576" class="btn btn-primary" href="#">حذف خيارات</a>
 <a id="exclude-choice2" style="font-size:24px;background-color:#fd3576;border-color:#fd3576" class="btn btn-primary" href="#">حذف خيارات</a>
 <div id="time_up" style="margin-top:120px; margin-bottom:220px"><h1 style="font-size:80px">انتهى الوقت!</h1></div>
@@ -147,7 +148,13 @@ td.the_wheel{
 {% else %}
     <a id="next" style="font-size:24px;background-color:#fd3576;border-color:#fd3576" class="btn btn-primary" href="{% url 'science_olympiad:show_question' contest.pk next_question_id %}">
 {% endif %}
+
+
 {% if question.is_last_main %}انتهت المسابقة{% else %}السؤال التالي{% endif %}</a>
+<div>
+<a id="results" style="font-size:24px;background-color:#fd3576;border-color:#fd3576;" class="btn btn-primary mt-4" href="{% url 'science_olympiad:end_contest' %}">النتائج</a>
+</div>
+
 <div id="wheel_section" style="margin-top:-150px">
     <div align="center">
     <!--<table cellpadding="0" cellspacing="0" border="0">-->
@@ -184,7 +191,6 @@ td.the_wheel{
     <div class="container" align="left">
         <img src="{% static 'science_olympiad/images/logo_white.png' %}" style="height:100px">
         <img src="{% static 'science_olympiad/images/ta_logo_white.png' %}" style="height:80px; padding-left:20px">
-        <img src="{% static 'science_olympiad/images/sc_logo_white.png' %}" style="height:80px; padding-left:20px">
         <img src="{% static 'science_olympiad/images/uni_logo_white.png' %}" style="height:80px">
     </div>
 {% endblock %}
@@ -197,6 +203,8 @@ function contestDone(data){
     $('#question_section').hide();
     $('#time_up').show();
     $('#next').show();
+    $('#results').show();
+
     $('#exclude-choice1').hide();
     $('#exclude-choice2').hide();
 }
@@ -207,6 +215,7 @@ $('#show-q').click(function(){
     $('#exclude-choice2').hide();
     $('#question_section').fadeIn();
     $('#next').fadeIn();
+    $('#results').fadeIn();
 });
 
 <!--Start Timer-->
@@ -306,6 +315,7 @@ $(document).ready(function() {
 $('#time_up').hide();
 $('#question_section').hide();
 $('#next').hide();
+$('#results').hide();
 $('#exclude-choice1').hide();
 $('#exclude-choice2').hide();
 $('#wheel_section').show();
@@ -454,6 +464,7 @@ $(jqcd_reset).hide()
                 $('#wheel_section').hide();
                 $('#question_section').fadeIn();
                 $('#next').fadeIn();
+                $('#results').fadeIn();
             }
 <!-- End WinWheel -->
 

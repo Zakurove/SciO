@@ -55,12 +55,12 @@
 
 {% block content %}
 
-<div class="page-header header-filter" data-parallax="true" style="background-image: url({% static 'science_olympiad/images/header.jpg' %}); ">
+<div class="page-header" data-parallax="true" style="background-image: url({% static 'science_olympiad/images/header.png' %}); ">
     <div class="container">
         <div class="row">
       <div class="col-md-8 ml-auto mr-auto">
         <div class="brand text-center">
-            <div class="text-center"><img style="padding-top:80px" class="rounded-circle img-fluid" width="100%" src="{% static 'science_olympiad/images/logo_white.png' %}"></div>
+            <div class="text-center"><img style="padding-top:80px" class=" img-fluid" width="100%" src="{% static 'science_olympiad/images/logo_white.png' %}"></div>
         </div>
       </div>
     </div>
@@ -68,65 +68,14 @@
 </div>
 
 <div class="main">
-  <div class="container">
-    <div class="section text-center">
-      <p style="margin: 20px; line-height: 40px; color:#999; font-size: 20px; text-align:justify; text-align-last: center" class="title" id="about">
-          الأولمبياد العلمي ، هو أحد البرامج الكبرى التابعة لجامعة الملك سعود بن عبد العزيز للعلوم الصحية. يهدف للتوعية بمعنى وقيمة الإبداع العلمي، وخلق منصة حاضنة تلائم آمال وطموحات شباب الجيل الصاعد، من المهتمين بالعلم والابتكار وصناعة الفكرة وأدواتها من داخل الجامعة وخارجها من خلال مساراته المتعددة.
-      </p>
-      <h3>____________________________________________________________________</h3>
+  <div class="text-center mx-auto my-4">
+    <a  style="font-size:24px;background-color:#fd3576;border-color:#fd3576;" class="btn btn-primary" href="{% url 'science_olympiad:end_contest' %}">المسابقة الأولى</a>
+    <a  style="font-size:24px;background-color:#fd3576;border-color:#fd3576;" class="btn btn-primary" href="{% url 'science_olympiad:end_contest' %}">المسابقة الثانية</a>
     </div>
-  </div>
-  <div class="container" align="center">
-    <h3 style="" class="title">المسارات</h3>
-    <div class="row">
-    <div class="col col-sm-12 col-md-3"><a href="{% url 'science_olympiad:view_section' 'lectures' %}">
-        <img height="130px" src="{% static 'science_olympiad/images/sections/white/lectures_white.png' %}">
-        <br><h4>المحاضرات<br>
-        <!--COUNTDOWN--><p id="demo1"></p>
-        </h4></a></div>
-    <div class="col col-sm-12 col-md-3"><a href="{% url 'science_olympiad:view_section' 'contest' %}">
-        <img height="130px" src="{% static 'science_olympiad/images/sections/white/contest_white.png' %}">
-        <br><h4>المسابقة العلمية<br>
-        <!--COUNTDOWN--><p id="demo2"></p>
-        </h4></a></div>
-    <div class="col col-sm-12 col-md-3"><a href="{% url 'science_olympiad:view_section' 'gallery' %}">
-        <img height="130px" src="{% static 'science_olympiad/images/sections/white/gallery_white.png' %}">
-        <br><h4>معرض الدَيْجُور<br>
-        <!--COUNTDOWN--><p id="demo3"></p>
-        </h4></a></div>
-    <div class="col col-sm-12 col-md-3"><a href="{% url 'science_olympiad:view_section' 'hackathon' %}">
-        <img height="130px" src="{% static 'science_olympiad/images/sections/white/hackathon_white.png' %}">
-        <br><h4>الهاكاثون التقني<br>
-        <!--COUNTDOWN--><p id="demo4"></p>
-        </h4></a></div>
-    </div>
-
-    <h3>____________________________________________________________________</h3>
-  </div>
-  <div class="container">
-  <div class="row">
-      <div class="col-md-6 sm-12">
-        <div class="card" style="height: 28rem;">
-          <div class="card-body">
-            <a class="twitter-timeline" data-height="400" href="https://twitter.com/IAU_KSAUHS?ref_src=twsrc%5Etfw">Tweets by IAU_KSAUHS</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </div>
-        </div>
+    <div class="text-center mx-auto my-4">
+      <a  style="font-size:24px;background-color:#fd3576;border-color:#fd3576;" class="btn btn-primary" href="{% url 'science_olympiad:end_contest' %}">المسابقة الثالثة</a>
+      <a  style="font-size:24px;background-color:#fd3576;border-color:#fd3576;" class="btn btn-primary" href="{% url 'science_olympiad:end_contest' %}">المسابقة الرابعة</a>
       </div>
-      <div class="col-md-6 sm-12">
-        <div class="card" style="height: 28rem;">
-          <div class="card-body">
-            <div align="center">
-                <br><br><br><br><br><br>
-            <p class="card-text" style="font-size:24px;">المخترعين</p>
-            <a href="{% url 'science_olympiad:add_inventor' %}" class="btn" style="font-size:20px">للتسجيل</a></div>
-          </div>
-        </div>
-      </div>
-
-
-
-  </div>
-</div>
 </div>
 {% endblock %}
 
