@@ -23,6 +23,6 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', include('science_olympiad.urls')),
-    re_path('', include(('science_olympiad.urls', 'science_olympiad'), namespace="science_olympiad")),
+    path('', include(('science_olympiad.urls', 'science_olympiad'), namespace="science_olympiad")),
     # path('/', include('science_olympiad.urls', namespace="science_olympiad", app_name="science_olympiad")),
 ]
