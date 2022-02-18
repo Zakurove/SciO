@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.utils import timezone
-#from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext_lazy as _
 
 from django.db import models
 
@@ -31,21 +31,6 @@ invention_categories = (
     ('prg', 'الأنظمة البرمجية والبرمجة'),
     ('mob', 'العلوم الطبية الانتقالية'),
     ('oth', 'تصنيف آخر')
-)
-
-question_categories = (
-
-    ('chm', 'الكيمياء'),
-    ('mbi', 'الأحياء والكائنات'),
-    ('phys', 'الفيزياء والذرات'),
-    ('ast','الفضاء والكواكب' ),
-    ('math', 'الرياضيات والهندسة' ),
-    ('pro', 'التقنية والحاسوب')
-
-)
-
-team_categories = (
-
 )
 
 class Inventor(models.Model):
@@ -83,7 +68,6 @@ class ContestQuestion(models.Model):
     contest = models.ForeignKey(Contest, verbose_name=u'المسابقة', default="", on_delete=models.CASCADE)
     text = models.TextField(u'نص السؤال')
     category = models.CharField(u'الفئة', max_length=100)
-    que_category = MultiSelectField(u'التصنيف (يمكن اختيار أكثر من تصنيف)', choices=question_categories)
     olympiad_version = models.CharField(u'نسخة الأولمبياد', max_length=100, null=True) #May be used later in life
     is_last_main = models.BooleanField(u'هل هو السؤال الأخير من الأسئلة الأساسية؟', default=False)
     is_extra = models.BooleanField(u'هل السؤال إضافي؟', default=False)

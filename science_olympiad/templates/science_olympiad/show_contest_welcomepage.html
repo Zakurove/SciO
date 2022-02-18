@@ -53,9 +53,6 @@ a, a:hover, a:focus{
           <img style="padding:30px; max-width: 400px;" src="{% static 'science_olympiad/images/sections/icons/contest.png' %}">
           <br>
 
-          <h2>الفِرق المنافِسة:</h2>
-
-
           <h2 style="color: black;">الفِرق المنافِسة:</h2>
           {% if contest_id == '6' %}
           <h2 style="color: black;">كلية العلوم والمهن الصحية -العلوم الطبية التطبيقية</h2>
@@ -73,7 +70,7 @@ a, a:hover, a:focus{
           {% endif %}
 
           <br>
-          <a href="{% url 'science_olympiad:show_question' 5 6 %}" class="btn btn-primary" style="font-size:24px; background-color:#a21f1a; border-color:#fd3576; align-text:center">بدء المسابقة</a>
+          <a href="{% url 'science_olympiad:show_question' contest_id question.pk %}" class="btn btn-primary" style="font-size:24px; background-color:#a21f1a; border-color:#fd3576; align-text:center">بدء المسابقة</a>
       </div>
 
 </div>
