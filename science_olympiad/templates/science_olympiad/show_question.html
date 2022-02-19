@@ -109,26 +109,26 @@
      <div class="col-lg-12" style="padding-left:70px">
          <div></div>
          <div class="row" align="rtl">
-             <div id="choice1" class="choice col" style="border: 3px solid black; padding:15px; margin:10px; color: black" onClick="jqcd('start')">
+             <div id="choice1" class="choice col" style="border: 3px solid #053349; padding:15px; margin:10px; color: black" onClick="jqcd('start')">
                   <img align="right" src="{% static 'science_olympiad/box_a.png' %}" style="width:25px; margin-left:15px;">أ) {{choice1.text}}
              </div>
-             <div id="choice2" class="choice col" style="border: 3px solid black; padding:15px; margin:10px; color: black" onClick="jqcd('start')">
+             <div id="choice2" class="choice col" style="border: 3px solid #053349; padding:15px; margin:10px; color: black" onClick="jqcd('start')">
                   <img align="right" src="{% static 'science_olympiad/box_b.png' %}" style="width:25px; margin-left:15px;"> ب) {{choice2.text}}
              </div>
          </div>
          <br>
          <div class="row">
-             <div id="choice3" class="choice col" style="border: 3px solid black; padding:15px; margin:10px; color: black" onClick="jqcd('start')">
+             <div id="choice3" class="choice col" style="border: 3px solid #053349; padding:15px; margin:10px; color: black" onClick="jqcd('start')">
                   <img align="right" src="{% static 'science_olympiad/box_c.png' %}" style="width:25px; margin-left:15px;"> ج) {{choice3.text}}
              </div>
-             <div id="choice4" class="choice col" style="border: 3px solid black; padding:15px; margin:10px; color: black" onClick="jqcd('start')">
+             <div id="choice4" class="choice col" style="border: 3px solid #053349; padding:15px; margin:10px; color: black" onClick="jqcd('start')">
                   <img align="right" src="{% static 'science_olympiad/box_d.png' %}" style="width:25px; margin-left:15px;"> د) {{choice4.text}}
              </div>
          </div>
      </div>
      <br><br>
      <div class="col-lg-12">
-         <span id="jqcd_count" style="text-align:center; font-size:50px; color: black;">00:30</span><br><br>
+         <span id="jqcd_count" style="text-align:center; font-size:50px; color: black">00:30</span><br><br>
          <input type="button" class="btn btn-primary" style="width:180px; background-color:#a21f1a; border-color:#fd3576" id="jqcd_start" value="بدء" onClick="jqcd('start')" />
          <input type="button" class="btn btn-primary" id="jqcd_stop" value="انتهاء" onClick="jqcd('stop')" />
          <input type="button" class="btn btn-primary" style="width:140px" id="jqcd_reset" value="إعادة تعيين" onClick="jqcd('reset')" /><br><br>
@@ -171,8 +171,18 @@
          <img style="width:25%" src="{% static 'science_olympiad/wheel/science.gif' %}">
          {% elif question.category == 'ترفيهي' %}
          <img style="width:25%" src="{% static 'science_olympiad/wheel/entertainment.gif' %}">
-         {% elif question.category == 'الفلك والفضاء' %}
-         <img style="width:25%" src="{% static 'science_olympiad/wheel/space.gif' %}">
+         {% elif question.category == 'space' %}
+         <img style="width:25%; border: #a21f1a;" src="{% static 'science_olympiad/wheel/space.gif' %}">
+         {% elif question.category == 'math' %}
+         <img style="width:25%; border: #a21f1a;" src="{% static 'science_olympiad/wheel/math.gif' %}">
+         {% elif question.category == 'comp' %}
+         <img style="width:25%; border: #a21f1a;" src="{% static 'science_olympiad/wheel/comp.gif' %}">
+         {% elif question.category == 'chem' %}
+         <img style="width:25%; border: #a21f1a;" src="{% static 'science_olympiad/wheel/chem.gif' %}">
+         {% elif question.category == 'phys' %}
+         <img style="width:25%; border: #a21f1a;" src="{% static 'science_olympiad/wheel/phys.gif' %}">
+         {% elif question.category == 'bio' %}
+         <img style="width:25%; border: #a21f1a;" src="{% static 'science_olympiad/wheel/bio.gif' %}">
          {% endif %}
          <!--<div style="width:180px; background-color:#fd3576; border-color:#fd3576" class="btn btn-primary" id="spin_button" onClick="startSpin();">إدارة العجلة</div>-->
          <br><br>
@@ -532,16 +542,16 @@
     var c4 = "{{choice4}}";
  
     if( e1 == c1 ){
-     document.getElementById("choice1").style.background = "#000000";
+     document.getElementById("choice1").style.background = "#053349";
     }
     if( e1 == c2 ){
-     document.getElementById("choice2").style.background = "#000000";
+     document.getElementById("choice2").style.background = "#053349";
     }
     if( e1 == c3 ){
-     document.getElementById("choice3").style.background = "#000000";
+     document.getElementById("choice3").style.background = "#053349";
     }
     if( e1 == c4 ){
-     document.getElementById("choice4").style.background = "#000000";
+     document.getElementById("choice4").style.background = "#053349";
     }
     $('#exclude-choice1').hide();
     $('#exclude-choice2').show();
@@ -556,16 +566,16 @@
     var c4 = "{{choice4}}";
  
     if( e2 == c1 ){
-     document.getElementById("choice1").style.background = "#000000";
+     document.getElementById("choice1").style.background = "#053349";
     }
     if( e2 == c2  ){
-     document.getElementById("choice2").style.background = "#000000";
+     document.getElementById("choice2").style.background = "#053349";
     }
     if( e2 == c3  ){
-     document.getElementById("choice3").style.background = "#000000";
+     document.getElementById("choice3").style.background = "#053349";
     }
     if( e2 == c4  ){
-     document.getElementById("choice4").style.background = "#000000";
+     document.getElementById("choice4").style.background = "#053349";
     }
  });
  
