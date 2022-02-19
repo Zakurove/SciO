@@ -20,3 +20,6 @@ ScienceOlympics/settings.py
 settings.py
 settings
 debug.log 
+urls.py
+ScienceOlympics/ScienceOlympics/urls.py
+ScienceOlympics/science_olympiad/urls.py
