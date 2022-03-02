@@ -46,6 +46,7 @@ input#jqcd_stop,
 input#jqcd_reset {
   font-size: 12pt;
   font-weight: bold;
+  font-color:#053349;
 }
 input#jqcd_start,
 input#jqcd_stop,
@@ -67,8 +68,8 @@ input#jqcd_reset {
 .btn.btn-primary, .btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary:hover{
     font-size:24px;
     color: #000;
-    background-color:#6DEDF2;
-    border-color:#6DEDF2;
+    background-color:#053349;
+    border-color:#053349;
     align-text:center"
 }
 
@@ -112,10 +113,10 @@ td.the_wheel{
     </div>
     <br><br>
     <div class="col-lg-12">
-        <span id="jqcd_count" style="text-align:center; font-size:50px">00:00:00</span><br><br>
-        <input type="button" class="btn btn-primary" style="width:180px; background-color:#6DEDF2; border-color:#a21f1a" id="jqcd_start" value="بدء" onClick="jqcd('start')" />
-        <input type="button" class="btn btn-primary" style="width:180px; background-color:#6DEDF2; border-color:#a21f1a" id="jqcd_stop" value="انتهاء" onClick="jqcd('stop')" />
-        <input type="button" class="btn btn-primary" style="width:180px; background-color:#6DEDF2; border-color:#a21f1a" id="jqcd_reset" value="إعادة تعيين" onClick="jqcd('reset')" /><br><br>
+        <span id="jqcd_count" style="text-align:center; background-color:#053349; font-size:50px">00:00:00</span><br><br>
+        <input type="button" class="btn btn-primary" style="width:180px; background-color:#053349; border-color:#a21f1a" id="jqcd_start" value="بدء" onClick="jqcd('start')" />
+        <input type="button" class="btn btn-primary" style="width:180px; background-color:#053349; border-color:#a21f1a" id="jqcd_stop" value="انتهاء" onClick="jqcd('stop')" />
+        <input type="button" class="btn btn-primary" style="width:180px; background-color:#053349; border-color:#a21f1a" id="jqcd_reset" value="إعادة تعيين" onClick="jqcd('reset')" /><br><br>
         <input type="text" id="jqcd_time" value="00:00:00" />
     </div>
 </div>
